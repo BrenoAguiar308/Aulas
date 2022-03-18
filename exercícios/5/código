@@ -1,0 +1,21 @@
+int ledAzul = 2;
+int botao = 3;
+
+int estadoBotao = 0;
+void setup()
+{
+pinMode(ledAzul, OUTPUT);
+pinMode(botao, INPUT);
+}
+
+void loop() {
+
+estadoBotao = digitalRead(botao);
+
+if (estadoBotao == HIGH) {
+digitalWrite(ledAzul, LOW);
+} else {
+digitalWrite(ledAzul, HIGH);
+   }
+}
+
